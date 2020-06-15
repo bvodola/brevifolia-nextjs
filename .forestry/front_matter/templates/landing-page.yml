@@ -5,7 +5,9 @@ fields:
 - name: landing_page_blocks
   type: blocks
   label: Landing Page Blocks
-  template_types: []
+  template_types:
+  - landing-page
+  - post
   config:
     min: 
     max: 
