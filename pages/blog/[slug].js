@@ -178,10 +178,18 @@ export async function getStaticProps({ ...ctx }) {
   const config = await import(`../../data/config.json`)
   const data = matter(content.default)
 
+  // Convert date frontmatter props to String so it can be JSON serializable
+  let fm = data.data
+  Object.keys(fm).map(key => {
+    if (typeof fm[key].getDate === 'function') {
+      fm[key] = String(fm[key])
+    }
+  })
+
   return {
     props: {
       siteTitle: config.title,
-      frontmatter: data.data,
+      frontmatter: fm,
       markdownBody: data.content,
     },
   }
