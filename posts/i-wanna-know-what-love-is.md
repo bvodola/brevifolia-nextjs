@@ -1,8 +1,12 @@
 ---
 title: I wanna know what love is
-author: 'I want you to know '
-date: 2020-06-14T03:00:00Z
-hero_image: "/uploads/p_20160726_090402.jpg"
-
+author: 'I want you to know'
+date: '2020-06-14T03:00:00Z'
+hero_image: '../static/p_20160726_090402.jpg'
 ---
+
 Content, motherfucker!
+
+```js
+console.log('test')
+```
